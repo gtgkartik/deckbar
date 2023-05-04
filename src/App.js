@@ -12,13 +12,13 @@ function App() {
   return (
     <>
     <div className='w-screen h-auto flex flex-col'>
-      {/* <Header/>
+      <Header/>
       <Slider/>
       <AboutUs/>
       <BottomNavbar/>
       <Gallery bgcolor="#eeeeee" title= "Deck Bar E-Shop" btntext="Order Now"/>
-      <Gallery title= "Dine In" btntext="Browse Menu"/> */}
-      <CustomerReview/>
+      <Gallery title= "Dine In" btntext="Browse Menu"/>
+      {/* <CustomerReview/> */}
     </div>
     </>
   );
