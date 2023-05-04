@@ -4,6 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        libre :  "'Libre Baskerville', serif",
+        archi : "'Architects Daughter', cursive"
+      },
+
       width: {
         150: "150px",
         190: "190px",
@@ -39,7 +44,8 @@ module.exports = {
         620: "620px",
       },
       screens: {
-        sm: "640px",
+        sm: "20px",
+        ls: "640px",
         md: "1220px",
         lg: "1224px",
         xl: "1280px",
