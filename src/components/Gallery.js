@@ -1,82 +1,77 @@
+import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Socials from "./Socials";
-
-const slides = [
-  {
-    url: "https://www.facebook.com/photo/?fbid=798424658316630&set=a.277218380437263",
-  },
-  {
-    url: "https://www.facebook.com/NBAIndia/photos/a.120767717933456/6606948992648597/",
-  },
-  {
-    url: "https://www.facebook.com/CricTrackerIndia/photos/a.1646074219013839/3564839683803940/",
-  },
-  {
-    url: "https://www.facebook.com/FIBA/photos/a.10150738360011271/10160580408431271/",
-  },
-];
-
+import "./Gallerystyles.css";
 const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-  },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 4,
+    slidesToSlide: 4, // optional, default to 1.
   },
   tablet: {
-    breakpoint: { max: 800, min: 464 },
-    items: 2,
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    slidesToSlide: 3, // optional, default to 1.
   },
   mobile: {
-    breakpoint: { max: 640, min: 0 },
-    items: 1,
+    breakpoint: { max: 767, min: 464 },
+    items: 2,
+    slidesToSlide: 1, // optional, default to 1.
   },
 };
+const sliderImageUrl = [
+  //First image url
+  {
+    url: "https://plus.unsplash.com/premium_photo-1663853560438-6cc3a70a3c97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+  },
+  //Second image url
+  {
+    url: "https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+  },
+  //Third image url
+  {
+    url: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+  },
 
-const Gallery = (props) => {
+  //Fourth image url
+
+  {
+    url: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+  },
+];
+const Gallery = () => {
   return (
-    <>
-      <div
-        className={`bg-[${props.bgcolor}] ] sm:mt-20 h-[900px] flex flex-col  `}
+    <div className="flex flex-col ">
+      <h1 className="flex justify-center font-libre md:text-3xl sm:text-2xl font-semibold mb-[30px] sm:mt-[100px] md:mt-[10px] ">
+        Order Food Now
+      </h1>
+      <Carousel
+        responsive={responsive}
+        autoPlay={true}
+        swipeable={true}
+        draggable={true}
+        // showDots={true}
+        infinite={true}
+        partialVisible={false}
+        dotListClass="custom-dot-list-style"
       >
-        <h1 className="font-libre font-semibold text-center md:text-3xl  sm:text-2xl pt-10 py-[75px]">
-          {props.title}
-        </h1>
-        <Carousel
-          infinite={true}
-          transitionDuration={500}
-          responsive={responsive}
-          className=" z-0 "
-        >
-          <div className="mx-2">
-            <Socials link={`${slides[0].url}`} className="object-cover " />
-          </div>
-          <div className="mx-2">
-            <Socials link={`${slides[1].url}`} className="object-cover" />
-          </div>
-          <div className="mx-2">
-            <Socials link={`${slides[1].url}`} className="object-cover" />
-          </div>
-          <div className="mx-2">
-            <Socials link={`${slides[0].url}`} className="object-cover" />
-          </div>
-          <div className="mx-2">
-            <Socials link={`${slides[0].url}`} className="object-cover" />
-          </div>
-          <div className="mx-2">
-            <Socials link={`${slides[1].url}`} />
-          </div>
-        </Carousel>
-        <button className="bg-black mx-auto hover:bg-yellow duration-300 text-white font-bold py-2 px-4 font-libre rounded my-[75px]">
-          {props.btntext}
+        {sliderImageUrl.map((imageUrl, index) => {
+          return (
+            <div className="slider" key={index}>
+              <img src={imageUrl.url} alt="movie" />
+            </div>
+          );
+        })}
+      </Carousel>
+      <div className="flex justify-center mt-[20px]">
+        <button class="bg-black hover:bg-yellow text-white font-libre font-bold py-2 px-6 rounded">
+          Order Now
         </button>
       </div>
-    </>
+    </div>
   );
 };
-
 export default Gallery;

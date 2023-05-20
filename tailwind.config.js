@@ -52,6 +52,7 @@ module.exports = {
         "2xl": "1536px",
       },
       colors: {
+        yellowlight : "#EEE8AA",
         yellow: "#ddaa44",
         headingColor: "#2e2e2e",
         textColor: "#515151",

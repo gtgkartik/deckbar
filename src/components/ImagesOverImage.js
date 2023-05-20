@@ -6,8 +6,8 @@ const ImageOverImage = () => {
     return ( 
         <>
             <div className="relative mx-auto ">
-                <img className="rounded-lg drop-shadow-lg md:w-[300px] md:h-[400px]  drop-shadow-2xl object-cover" src= {images[0].url}/>
-                <img className="md:absolute md:top-[300px] md:left-[100px] md:w-[300px] h-[300px] sm:absolute sm:top-[400px] sm:left-[200px] rounded-lg object-cover drop-shadow-2xl" src= {images[1].url}/>
+                <img className="rounded-lg  md:w-[300px] md:h-[400px] shadow-lg  hover:shadow-lg hover:shadow-black/30 object-cover" src= {images[0].url}/>
+                <img className="md:absolute md:top-[300px] md:left-[100px] shadow-lg md:w-[300px] h-[300px] sm:absolute sm:top-[400px] sm:left-[200px] rounded-lg object-cover  hover:shadow-lg hover:shadow-black/30" src= {images[1].url}/>
             </div>
 
             

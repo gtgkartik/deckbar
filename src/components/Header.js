@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import {BsBag  } from "react-icons/bs";
 import {RxCross2} from "react-icons/rx";
 import { useState, useEffect } from 'react';
-const Header = () => {
+const Header = (props) => {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
@@ -25,12 +25,12 @@ const Header = () => {
 
             {/* Primary Navbar  */}
             <div className='hidden md:flex flex space-x-10 px-10'>
-                <a className='hover:text-yellow duration-150 flex-shrink-0 truncate' href='#'>Home</a>
-                <a className='hover:text-yellow duration-150 flex-shrink-0 truncate' href='#'>About Us</a>
-                <a className='hover:text-yellow duration-150 flex-shrink-0 truncate' href='#'>Promotion</a>
-                <a className='hover:text-yellow duration-150 flex-shrink-0 truncate' href='#'>Order</a>
-                <a className='hover:text-yellow duration-150 flex-shrink-0 truncate' href='#'>Menu</a>
-                <a className='hover:text-yellow duration-150 flex-shrink-0 truncate' href='#'>Contact Us</a> 
+                <a className={`hover:text-yellow ${props.home} duration-150 flex-shrink-0 truncate`} href="/">Home</a>
+                <a className={`hover:text-yellow ${props.aboutus} duration-150 flex-shrink-0 truncate`} href='about-us'>About Us</a>
+                <a className={`hover:text-yellow ${props.promotion} duration-150 flex-shrink-0 truncate`} href='promotion'>Promotion</a>
+                <a className={`hover:text-yellow ${props.order} duration-150 flex-shrink-0 truncate`} href='/order'>Order</a>
+                <a className={`hover:text-yellow ${props.menu} duration-150 flex-shrink-0 truncate`} href='/menu'>Menu</a>
+                <a className={`hover:text-yellow ${props.contactus} duration-150 flex-shrink-0 truncate`} href='contactus'>Contact Us</a> 
             </div>
 
             {/* Secondary Navbar  */}
@@ -84,12 +84,12 @@ const Header = () => {
                 
        
                 <ul className=''>
-                    <li className='my-5'><a className='hover:text-yellow duration-300 flex-shrink-0 truncate text-xl font-sans' href='#'>Home</a></li>
-                    <li className='my-5'><a className='hover:text-yellow duration-300 flex-shrink-0 truncate text-xl font-sans' href='#'>About Us</a></li>
-                    <li className='my-5'><a className='hover:text-yellow duration-300 flex-shrink-0 truncate text-xl font-sans' href='#'>Promotion</a></li>
-                    <li className='my-5'><a className='hover:text-yellow duration-300 flex-shrink-0 truncate text-xl font-sans' href='#'>Order</a></li>
-                    <li className='my-5'><a className='hover:text-yellow duration-300 flex-shrink-0 truncate text-xl font-sans' href='#'>Menu</a></li>
-                    <li className='my-5'><a className='hover:text-yellow duration-300 flex-shrink-0 truncate text-xl font-sans' href='#'>Contact US </a></li>
+                    <li className='my-5'><a className={`hover:text-yellow ${props.home} duration-150 flex-shrink-0 truncate`} href="/" >Home</a></li>
+                    <li className='my-5'><a className={`hover:text-yellow ${props.aboutus} duration-150 flex-shrink-0 truncate`} href='about-us'>About Us</a></li>
+                    <li className='my-5'><a className={`hover:text-yellow ${props.promotion} duration-150 flex-shrink-0 truncate`} href='promotion'>Promotion</a></li>
+                    <li className='my-5'><a  className={`hover:text-yellow ${props.order} duration-150 flex-shrink-0 truncate`} href='/order'>Order</a></li>
+                    <li className='my-5'><a className={`hover:text-yellow ${props.menu} duration-150 flex-shrink-0 truncate`} href='/menu'>Menu</a></li>
+                    <li className='my-5'><a className={`hover:text-yellow ${props.contactus} duration-150 flex-shrink-0 truncate`} href='contactus'>Contact US </a></li>
                 </ul>            
    
         </nav>

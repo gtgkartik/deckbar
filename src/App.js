@@ -1,25 +1,28 @@
 import './App.css';
-import AboutUs from './components/AboutUs';
-import AboutUs2 from './components/AboutUs2';
-import BottomNavbar from './components/BottomNavbar';
-import CustomerReview from './components/CustomerReview';
-import Gallery from './components/Gallery';
-import Gallery2 from './components/Gallery2';
-import Header from './components/Header';
-import Slider from './components/Slider';
-import Socials from './components/Socials';
+
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AboutUs from './pages/Aboutus';
+import Promotion from './pages/Promotion';
+import Order from './pages/Order';
+import Menu from './pages/Menu';
+import ContactUs from './pages/ContactUs';
 function App() {
   return (
     <>
-    <div className='w-screen h-auto flex flex-col'>
-      <Header/>
-      <Slider/>
-      <AboutUs/>
-      <BottomNavbar/>
-      <Gallery bgcolor="#eeeeee" title= "Deck Bar E-Shop" btntext="Order Now"/>
-      <Gallery title= "Dine In" btntext="Browse Menu"/>
-      {/* <CustomerReview/> */}
-    </div>
+    
+    <BrowserRouter>
+    <Routes>
+      <Route path = "/" element ={<Home/>}/>
+      <Route path = "/about-us" element ={<AboutUs/>}/>
+      <Route path='/promotion' element ={<Promotion/>}/>
+      <Route path="/order" element = {<Order/>} />
+      <Route path="/menu" element = {<Menu/>}/>
+      <Route path="/contactus" element = {<ContactUs/>}/>
+
+    </Routes>
+    </BrowserRouter>
     </>
   );
 }
