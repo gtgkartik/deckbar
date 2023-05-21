@@ -8,6 +8,7 @@ import Promotion from './pages/Promotion';
 import Order from './pages/Order';
 import Menu from './pages/Menu';
 import ContactUs from './pages/ContactUs';
+import Test from './pages/Test';
 function App() {
   return (
     <>
@@ -20,6 +21,8 @@ function App() {
       <Route path="/order" element = {<Order/>} />
       <Route path="/menu" element = {<Menu/>}/>
       <Route path="/contactus" element = {<ContactUs/>}/>
+      <Route path="/test" element = {<Test/>}/>
+
 
     </Routes>
     </BrowserRouter>

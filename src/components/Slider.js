@@ -37,7 +37,6 @@ const Slider = () => {
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           className="w-full h-full bg-center bg-cover duration-500 mix-blend-overlay absolute "
         >
-          <img src="" />
         </div>
         {/* left arrow  */}
         <div className="absolute z-10 top-[50%] cursor-pointer left-5">
