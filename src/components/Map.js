@@ -15,7 +15,7 @@ function IsMap() {
   const center = useMemo(() => ({ lat: 1.312340, lng: 103.862808 }), []);
 
   return (
-    <GoogleMap zoom={15} center={center} mapContainerClassName="w-[500px] h-[300px]">
+    <GoogleMap zoom={15} center={center} mapContainerClassName="md:w-[500px] h-[300px] sm:w-full ">
       <MarkerF position={center} />
     </GoogleMap>
   );

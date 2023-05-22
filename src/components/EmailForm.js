@@ -34,41 +34,45 @@ const EmailForm = (props) => {
 
       <Socials />
 
-      <div className="flex  justify-center px-[100px] mt-11">
-        <Map />
-        <div className="flex flex-col ml-20 ">
-          <div className="flex flex-col">
-            <h1 className="font-libre font-semibold text-[16px]">
+      {/* Map and extras Section  */}
+      <div className="w-full md:py-[80px] md:flex-row sm:flex-col py-5 flex mx-auto px-[150px] ">
+        {/* Left handside  */}
+        <div className="md:basis-[35%] sm:basis-[100%]">
+          <center>
+            <Map />
+          </center>
+        </div>
+        {/* right hand side  */}
+        <div className="basis-[65%] flex font-libre px-10">
+          {/* left hand side  */}
+          <div className="basis-[50%]">
+            <h1 className="font-libre font-semibold text-xl my-3">
               Opening Hours
             </h1>
-            <h1>
-              11:00am to 12:00am (Sunday & Public Holiday Close)
+            <h1 className="font-libre my-8">
+              11:00am to 12:00am (Sunday & Public Holiday Close) Look out for
+              announcement on our Facebook
               <br />
-              Look out for announcement on our Facebook
             </h1>
-          </div>
-
-          <div className="flex flex-row">
-            <GrLocationPin />
-            <h1>Blk 7 Tanjong Pagar Plaza #01-103 Singapore 081007</h1>
-          </div>
-        </div>
-
-        <div className="flex flex-col ml-20 ">
-          <div className="flex flex-col">
-            <h1 className="font-libre font-semibold text-[16px]">
-              For Any Enquiry / <br />
-              Feedback, Please Contact
-            </h1>
-            <div className="flex flex-row">
-              <MdEmail />
-              <h1>enquiry@bluemist.sg</h1>
+            <div className="flex flex-row items-center mx-auto">
+              <GrLocationPin size={40} />
+              <h1>Blk 7 Tanjong Pagar Plaza #01-103 Singapore 081007</h1>
             </div>
           </div>
-
-          <div className="flex flex-row">
-            <GrLocationPin />
-            <h1>Blk 7 Tanjong Pagar Plaza #01-103 Singapore 081007</h1>
+          {/* right hand side  */}
+          <div className="basis-[50%]">
+            <h1 className="font-libre font-semibold text-xl my-3">
+            For Any Enquiry / <br/> Feedback, Please Contact
+            </h1>
+            <h1 className="font-libre my-8">
+              11:00am to 12:00am (Sunday & Public Holiday Close) Look out for
+              announcement on our Facebook
+              <br />
+            </h1>
+            <div className="flex flex-row items-center mx-auto">
+              <GrLocationPin size={40} />
+              <h1>Blk 7 Tanjong Pagar Plaza #01-103 Singapore 081007</h1>
+            </div>
           </div>
         </div>
       </div>
