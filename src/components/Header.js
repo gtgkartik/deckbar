@@ -89,7 +89,9 @@ const Header = (props) => {
                     <li className='my-5'><a className={`hover:text-yellow ${props.promotion} duration-150 flex-shrink-0 truncate`} href='promotion'>Promotion</a></li>
                     <li className='my-5'><a  className={`hover:text-yellow ${props.order} duration-150 flex-shrink-0 truncate`} href='/order'>Order</a></li>
                     <li className='my-5'><a className={`hover:text-yellow ${props.menu} duration-150 flex-shrink-0 truncate`} href='/menu'>Menu</a></li>
-                    <li className='my-5'><a className={`hover:text-yellow ${props.contactus} duration-150 flex-shrink-0 truncate`} href='contactus'>Contact US </a></li>
+                    <li className='my-5'><a className={`hover:text-yellow ${props.contactus} duration-150 flex-shrink-0 truncate`} href='/contactus'>Contact US </a></li>
+                    <li className='my-5'><a className={`hover:text-yellow ${props.contactus} duration-150 flex-shrink-0 truncate`} href='/activities'>Activities</a></li>
+
                 </ul>            
    
         </nav>

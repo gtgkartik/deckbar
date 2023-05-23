@@ -54,7 +54,7 @@ const EmailForm = (props) => {
         {/* End Of Text  */}
 
         {/* Text Section  */}
-        <div className="px-5 sm:pt-10">
+        <div className="px-5 sm:pt-10 md:pt-0">
           <h1 className="text-md font-semibold font-libre">
             For Any Enquiry /
             <br />

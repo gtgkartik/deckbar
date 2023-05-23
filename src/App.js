@@ -9,6 +9,7 @@ import Order from './pages/Order';
 import Menu from './pages/Menu';
 import ContactUs from './pages/ContactUs';
 import Test from './pages/Test';
+import Mains from './pages/menuitems/Mains';
 function App() {
   return (
     <>
@@ -22,8 +23,7 @@ function App() {
       <Route path="/menu" element = {<Menu/>}/>
       <Route path="/contactus" element = {<ContactUs/>}/>
       <Route path="/test" element = {<Test/>}/>
-
-
+      <Route path= "/menu/mains" element={<Mains/>}/>
     </Routes>
     </BrowserRouter>
     </>
