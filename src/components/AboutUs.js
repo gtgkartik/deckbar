@@ -45,10 +45,6 @@ const AboutUs = () => {
                 <ImageOverImage/>
             </div>
         </div>
-
-    
-
-
         </>
      );
 }
