@@ -1,17 +1,28 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "./MenuCard.css";
+import Modal from "../components/Modal";
+import { useState } from "react";
 
 const MenuCard = (props) => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    let path = props.path
-    navigate(path); // Replace '/another-path' with the desired path
-  };
+  const handleOnClose = () => setShowMyModal(false)
+  const [showModal, setShowMyModal] = useState(false);
+
+  // const handleClick = () => {
+  //   console.log('clicked')
+  //   return (
+  //     <Modal/>
+  //   ) // Replace '/another-path' with the desired path
+  // };
 
   return (
     <>
-      <div className="relative overflow-hidden rounded-lg shadow-lg bg-gradient-to-tl cursor-pointer from-gray-700 to-gray-700" onClick={handleClick}>
+      <Modal onClose= {handleOnClose} visible={showModal} />
+      <div
+        className="relative overflow-hidden rounded-lg shadow-lg bg-gradient-to-tl cursor-pointer from-gray-700 to-gray-700"
+        onClick={() => setShowMyModal(true)}
+      >
         <img
           className="object-cover absolute w-full h-48 mix-blend-overlay"
           src={props.url}

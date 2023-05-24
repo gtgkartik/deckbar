@@ -1,96 +1,95 @@
-import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import "../components/Gallerystyles.css";
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-    slidesToSlide: 4, // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 768 },
-    items: 3,
-    slidesToSlide: 3, // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 767, min: 464 },
-    items: 2,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-};
-const sliderImageUrl = [
-  //First image url
-  {
-    url: "https://plus.unsplash.com/premium_photo-1663853560438-6cc3a70a3c97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
-  },
-  //Second image url
-  {
-    url: "https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-  },
-  //Third image url
-  {
-    url: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-  },
-
-  //Fourth image url
-
-  {
-    url: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-  },
-];
+import MenuCard from "../components/MenuCard";
 const Test = () => {
   return (
-    <div className="flex flex-col ">
-      <h1 className="flex justify-center font-libre md:text-3xl sm:text-2xl font-semibold mb-[30px] sm:mt-[100px] md:mt-[10px] ">
-        Order Food Now
-      </h1>
-      <Carousel
-        responsive={responsive}
-        autoPlay={true}
-        swipeable={true}
-        draggable={true}
-        // showDots={true}
-        infinite={true}
-        partialVisible={false}
-        dotListClass="custom-dot-list-style"
-      >
-       
-       
-            <div className="w-full md:h-[650px] m-auto relative sm:h-[550px] ">
-              <div className=" bg-gradient-to-tl from-gray-700 to-gray-700">
-                <div
-                  style={{ backgroundImage: `url(${sliderImageUrl[0].url})` }}
-                  className="mx-5 bg-center bg-cover duration-500 hover:mix-blend-overlay absolute "
-                ></div>
-              </div>
-
-              {/* Text and titles  */}
-              <div className=" flex flex-col absolute md:top-[350px] ls:top-[300px] sm:top-[350px] ls:pl-[100px] sm:pl-[50px] ">
-                <h1 className="font-libre text-white md:text-[15px] ls:text-[15px] sm:text-[13px]  mb-5 sm:justify-center">
-                  A rare cosy void deck space for you
-                </h1>
-                <h1 className="font-libre text-white md:text-[40px] ls:text-[30px] sm:text-[25px]">
-                  So Casual So Chill! <br /> Feel Good, feel Power up !
-                </h1>
-                <button className="bg-white hover:bg-black hover:text-white text-black font-libre py-2 w-[200px] mt-5 rounded">
-                  <a href="/order">Order Now</a>
-                </button>
-              </div>
-            </div>
-        
-       
-      </Carousel>
-
-      <div className="flex justify-center mt-[20px]">
-        <button class="bg-black hover:bg-yellow text-white font-libre font-bold py-2 px-6 rounded">
-          Order Now
-        </button>
+    <>
+      <div className="flex flex-col items-center mb-[90px] mt-[100px]">
+        <h1 className="ls:text-[40px] font-semibold font-libre sm:text-[32px]">
+          Menu
+        </h1>
+        <h1 className="ls:text-[15px] text-center texttitle sm:text-[14px] flex-wrap font-normal mt-6 font-libre overflow-hidden mx-0 px-4">
+          Refer to menu and WhatsApp us at 8771 2549 to place order between 10am
+          to 11pm Monday – Saturday. <br /> Menu price is subjected to 8% GST
+          for Takeaways.
+        </h1>
       </div>
-    </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-1 ls:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-8 w-full md:px-[150px] ls:px-[100px] sm:px-[50px] mt-6 mb-[130px]">
+        <MenuCard
+          title="Mains"
+          url="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/mains"
+        />
+        <MenuCard
+          title="Soups & Salads"
+          url="https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+          path="/menu/soupsandsalads"
+        />
+        <MenuCard
+          title="Appetizers"
+          url="https://images.unsplash.com/photo-1607098665874-fd193397547b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/appetizers"
+        />
+        <MenuCard
+          title="Pastas"
+          url="https://images.unsplash.com/photo-1597393353415-b3730f3719fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/pastas"
+        />
+        <MenuCard
+          title="Sandwiches"
+          url="https://images.unsplash.com/photo-1628191010210-a59de33e5941?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/sandwiches"
+        />
+        <MenuCard
+          title="Finger Foods"
+          url="https://images.unsplash.com/photo-1603573561692-d36965bd5096?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1159&q=80"
+          path="/menu/fingerfoods"
+        />
+        <MenuCard
+          title="Pizzas"
+          url="https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/pizzas"
+        />
+        <MenuCard
+          title="Desserts"
+          url="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/desserts"
+        />
+        <MenuCard
+          title="Beverages"
+          url="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/beverages"
+        />
+        <MenuCard
+          title="Beers"
+          url="https://images.unsplash.com/photo-1572916108357-39ee1f59e007?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/beers"
+        />
+        <MenuCard
+          title="House Wines"
+          url="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/housewines"
+        />
+        <MenuCard
+          title="Hot Drinks"
+          url="https://images.unsplash.com/photo-1598976796336-63db295ccde2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          path="/menu/hotdrinks"
+        />
+        <MenuCard
+          title="Cocktails"
+          url="https://images.unsplash.com/photo-1605270012917-bf157c5a9541?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+          path="/menu/cocktails"
+        />
+        <MenuCard
+          title="Mocktails"
+          url="https://images.unsplash.com/photo-1619604395920-a16f33192a50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+          path="/menu/mocktails"
+        />
+        {/* <MenuCard title = "Chocolates"  url ="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"/>
+        <MenuCard title = "Juices"  url ="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"/>
+ */}
+      </div>
+    </>
   );
 };
+
 export default Test;
