@@ -28,7 +28,7 @@ const GallerySocials = () => {
         <img className="h-auto max-w-full rounded-lg" src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
     </div>
     <div>
-        <img className="h-auto max-w-full rounded-lg" src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
+        <img className="h-auto max-w-full rounded-lg" src="https://images.pexels.com/photos/958546/pexels-photo-958546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
     </div>
 
 </div>

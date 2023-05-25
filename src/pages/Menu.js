@@ -3,8 +3,6 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HeaderImage from "../components/HeaderImage";
 import MenuCard from "../components/MenuCard";
-import Modal from "../components/Modal";
-import { isVisible } from "@testing-library/user-event/dist/utils";
 
 const records = [
   {

@@ -21,6 +21,7 @@ import HouseWines from './pages/menuitems/HouseWines';
 import HotDrinks from './pages/menuitems/HotDrinks';
 import Cocktails from './pages/menuitems/Cocktails';
 import Mocktails from './pages/menuitems/Mocktails';
+import Activities from './pages/Activities';
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
       <Route path="/order" element = {<Order/>} />
       <Route path="/menu" element = {<Menu/>}/>
       <Route path="/contactus" element = {<ContactUs/>}/>
+      <Route path="/activities" element={<Activities/>}/>
       <Route path="/test" element = {<Test/>}/>
       <Route path= "/menu/mains" element={<Mains/>}/>
       <Route path = "menu/soupsandsalads" element = {<SoupsAndSalads/>}/>

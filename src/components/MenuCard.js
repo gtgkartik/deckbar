@@ -12,6 +12,7 @@ import Desserts from "../Images/desserts.png";
 import Beverages from "../Images/beverages.png";
 import Beers from "../Images/beers.png";
 import HouseWines from "../Images/beers.png";
+import Housewinespdf from "../Images/housewinespdf.jpg";
 import HotDrinks from "../Images/hotdrinks.png";
 import Cocktails from "../Images/cocktails.png";
 import Mocktails from "../Images/mocktails.png";
@@ -35,46 +36,74 @@ const MenuCard = ({ title, url }) => {
   return (
     <>
       <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
-        <img src={Mains} />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Mains} />
+        </div>
       </Modal>
       <Modal isVisible={showModal2} onClose={() => setShowModal2(false)}>
-        <img src={SoupsAndSalads} />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={SoupsAndSalads} />
+        </div>
       </Modal>
       <Modal isVisible={showModal3} onClose={() => setShowModal3(false)}>
-        <img src={Appetizers} className="h-[780px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Appetizers} className="h-[780px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal4} onClose={() => setShowModal4(false)}>
-        <img src={Pastas} className="h-[600px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Pastas} className="h-[600px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal5} onClose={() => setShowModal5(false)}>
-        <img src={Sandwiches} className="h-[560px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Sandwiches} className="h-[560px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal6} onClose={() => setShowModal6(false)}>
-        <img src={FingerFoods} className="h-[650px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={FingerFoods} className="h-[650px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal7} onClose={() => setShowModal7(false)}>
-        <img src={Pizzas} className="h-[650px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Pizzas} className="h-[650px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal8} onClose={() => setShowModal8(false)}>
-        <img src={Desserts} className="h-[400px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Desserts} className="h-[400px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal9} onClose={() => setShowModal9(false)}>
-        <img src={Beverages} className="h-[460px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Beverages} className="h-[460px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal10} onClose={() => setShowModal10(false)}>
-        <img src={Beers} className="h-[780px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Beers} className="h-[780px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal11} onClose={() => setShowModal11(false)}>
-        <img src={HouseWines} className="h-[780px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Housewinespdf} className="h-[780px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal12} onClose={() => setShowModal12(false)}>
-        <img src={HotDrinks} className="h-[520px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={HotDrinks} className="h-[520px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal13} onClose={() => setShowModal13(false)}>
-        <img src={Cocktails} className="h-[780px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Cocktails} className="h-[780px]" />
+        </div>
       </Modal>
       <Modal isVisible={showModal14} onClose={() => setShowModal14(false)}>
-        <img src={Mocktails} className="h-[450px]" />
+        <div className="max-h-screen overflow-y-auto">
+          <img src={Mocktails} className="h-[450px]" />
+        </div>
       </Modal>
 
       {/* Mains  */}
@@ -259,7 +288,7 @@ const MenuCard = ({ title, url }) => {
 
           <div className="flex justify-center items-center h-48 z-10">
             <a href="#" className="text-xl texttitle underline text-white">
-            Beverages
+              Beverages
             </a>
           </div>
         </div>
@@ -286,6 +315,26 @@ const MenuCard = ({ title, url }) => {
         </div>
       </div>
       {/* end of beers  */}
+      {/* House wines  */}
+      <div className="menucard-container">
+        <div
+          className="relative overflow-hidden rounded-lg shadow-lg bg-gradient-to-tl cursor-pointer from-gray-700 to-gray-700"
+          onClick={() => setShowModal11(true)}
+        >
+          <img
+            className="object-cover absolute w-full h-48 mix-blend-overlay"
+            src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="Flower and sky"
+          />
+
+          <div className="flex justify-center items-center h-48 z-10">
+            <a href="#" className="text-xl texttitle underline text-white">
+              House of Wines
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* end of house wines  */}
 
       {/* Hot drinks  */}
       <div className="menucard-container">
@@ -301,7 +350,7 @@ const MenuCard = ({ title, url }) => {
 
           <div className="flex justify-center items-center h-48 z-10">
             <a href="#" className="text-xl texttitle underline text-white">
-            Hot Drinks
+              Hot Drinks
             </a>
           </div>
         </div>
@@ -343,7 +392,7 @@ const MenuCard = ({ title, url }) => {
 
           <div className="flex justify-center items-center h-48 z-10">
             <a href="#" className="text-xl texttitle underline text-white">
-            Mocktails
+              Mocktails
             </a>
           </div>
         </div>
