@@ -1,10 +1,10 @@
+import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HeaderImage from "../components/HeaderImage";
 import MenuCard from "../components/MenuCard";
 import Modal from "../components/Modal";
-import { useState } from "react";
-import mains from "../Images/mains.png";
+import { isVisible } from "@testing-library/user-event/dist/utils";
 
 const records = [
   {
@@ -98,14 +98,6 @@ const records = [
   },
   {
     id: 12,
-    title: "House Wines",
-    url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    path: "/menu/housewines",
-    modalimageurl:
-      "https://images.unsplash.com/photo-1536236397240-9b229a37a286?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-  },
-  {
-    id: 13,
     title: "Hot Drinks",
     url: "https://images.unsplash.com/photo-1598976796336-63db295ccde2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     path: "/menu/hotdrinks",
@@ -113,7 +105,7 @@ const records = [
       "https://images.unsplash.com/photo-1536236397240-9b229a37a286?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
   },
   {
-    id: 14,
+    id: 13,
     title: "Cocktails",
     url: "https://images.unsplash.com/photo-1605270012917-bf157c5a9541?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
     path: "/menu/cocktails",
@@ -121,7 +113,7 @@ const records = [
       "https://images.unsplash.com/photo-1536236397240-9b229a37a286?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
   },
   {
-    id: 15,
+    id: 14,
     title: "Mocktails",
     url: "https://images.unsplash.com/photo-1619604395920-a16f33192a50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
     path: "/menu/mocktails",
@@ -131,7 +123,6 @@ const records = [
 ];
 
 const Menu = () => {
-  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <Header menu="text-yellow" />
@@ -150,23 +141,24 @@ const Menu = () => {
           for Takeaways.
         </h1>
       </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-1 ls:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-8 w-full md:px-[150px] ls:px-[100px] sm:px-[50px] mt-6 mb-[130px]">
-        {records.map((record) => {
+        {/* {records.map((record) => {
           return (
             <>
+              
               <MenuCard
                 key={record.id}
                 title={record.title}
                 url={record.url}
                 path={record.path}
-                onClick={() => setShowModal(true)}// Update the state variable name here
+                
               />
             </>
           );
-        })}
+        })} */}
+        <MenuCard />
       </div>
-      {showModal && <Modal />}
+
       <Footer />
     </>
   );

@@ -1,10 +1,14 @@
-const Modal = ({ showModal, onClose, imageurl }) => {
-  console.log(imageurl);
-  if (!showModal) return null;
+const Modal = ({ isVisible, onClose, children}) => {
+
+  if (!isVisible) return null;
+
+  const handleClose = (e) => {
+      if (e.target.id === 'wrapper') onClose();
+  }
   return (
     <>
-      <div className="fixed z-10 inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center" onClick={onClose}>
-        <img className="w-[400px]" src={imageurl} alt="Modal Image" />
+      <div className="fixed z-10 backdrop-blur-sm inset-0 bg-black bg-opacity-30 flex justify-center items-center " id="wrapper" onClick={handleClose}>
+        {children}
       </div>
     </>
   );
