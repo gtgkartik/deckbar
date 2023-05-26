@@ -210,7 +210,7 @@ const CustomerReview = () => {
                     <p className="text-xl font-semibold leading-tight">
                       {review.author_name}
                     </p>
-                    <p className="text-sm uppercase">Aliquam illum</p>
+                    <p className="text-sm uppercase"></p>
                   </div>
                 </div>
               </>
