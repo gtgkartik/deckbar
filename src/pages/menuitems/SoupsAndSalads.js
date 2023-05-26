@@ -1,7 +1,6 @@
 import Header from "../../components/Header";
 import HeaderImage from "../../components/HeaderImage";
 import records from '../records.json'
-console.log(records)
 const SoupsAndSalads = () => {
   return (
     <>

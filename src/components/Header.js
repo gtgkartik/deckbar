@@ -10,7 +10,7 @@ const Header = (props) => {
     useEffect(() => {
         if (open) {
           document.body.classList.add('overlay');
-        } else {
+        } else {http://localhost:3000/activities
           document.body.classList.remove('overlay');
         }
       }, [open]);
@@ -19,7 +19,7 @@ const Header = (props) => {
     <nav className= "shadow-[500]">
 
         <div className='px-10 py-8 mx-auto flex justify-between items-center'>
-            <div className='flex items-center '>
+            <div className='flex items-center'>
                 <a href='#' className='logo text-2xl text-yellow flex-shrink-0 truncate'>Deck Bar</a>
             </div>
 
@@ -76,7 +76,7 @@ const Header = (props) => {
         </div>
 
                     
-        <nav className={`z-50 off-canvas-menu fixed h-screen top-0  w-1/2 mx-auto sm:w- sm:mx-0 bg-white md:hidden flex items-center
+        <nav className={`z-50 off-canvas-menu fixed h-screen top-0  w-1/2 mx-auto  sm:mx-0 bg-white md:hidden flex items-center
         px-8 ${open ? 'right-0' : 'hidden'}`}>
             {/* Mobile Hamburger  */}
              
