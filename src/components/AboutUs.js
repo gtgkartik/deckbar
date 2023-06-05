@@ -19,7 +19,7 @@ const AboutUs = () => {
                     <div className="py-5 leading-7">
                         At our Deck Bar, we believe that great food and drinks are meant to be savored in the open air, where the gentle breeze and warm sunshine enhance the dining experience. Whether you're seeking a refreshing cocktail, a perfectly crafted brew, or a tantalizing culinary adventure, we have something to satisfy every palate.
                     </div>
-                    <div className="py-5 leading-7">
+                    {/* <div className="py-5 leading-7">
                         Complementing our impressive beverage selection is our carefully curated menu, designed to delight and satisfy. Our culinary team takes inspiration from global flavors, infusing traditional dishes with a modern twist. Whether you're craving mouthwatering tapas, artisanal pizzas, or succulent grilled specialties, our menu offers a diverse range of options to please every palate.
                     </div>
                     <div className="py-5 leading-7">
@@ -30,7 +30,7 @@ const AboutUs = () => {
                     </div>
                     <div className="py-5 leading-7">
                         Come and discover the true essence of alfresco dining at our bar—a place where flavors mingle, conversations flow, and unforgettable memories are made. We look forward to welcoming you to our Deck Bar, where every sip and every bite is a celebration of the good life.
-                    </div>
+                    </div> */}
                     <div className="py-10 leading-7">
                         For reservation of tables, WhatsApp us at +65 9887 3377
                     </div>
@@ -43,6 +43,7 @@ const AboutUs = () => {
             {/* Right HandSide  */}
             <div className="sm:pt-10 md:w-[40%] flex justify-center md:relative md:right-12 sm:w-[100%]">
                 <ImageOverImage/>
+               
             </div>
         </div>
         </>

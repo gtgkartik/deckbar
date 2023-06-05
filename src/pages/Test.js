@@ -1,11 +1,10 @@
 import MenuCard from "../components/MenuCard";
-
+import InstaFeeds from './InstaFeeds.js'
 
 const Test = () => {
-  // console.log(reviews[0].reviews[0].author_name)
   return (
     <>
-           
+           <InstaFeeds token={process.env.REACT_APP_INS_TOKEN} limit={12} />
     </>
   );
 };

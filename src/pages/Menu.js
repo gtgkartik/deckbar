@@ -140,20 +140,6 @@ const Menu = () => {
         </h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 ls:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-8 w-full md:px-[150px] ls:px-[100px] sm:px-[50px] mt-6 mb-[130px]">
-        {/* {records.map((record) => {
-          return (
-            <>
-              
-              <MenuCard
-                key={record.id}
-                title={record.title}
-                url={record.url}
-                path={record.path}
-                
-              />
-            </>
-          );
-        })} */}
         <MenuCard />
       </div>
 

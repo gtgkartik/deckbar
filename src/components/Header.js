@@ -28,7 +28,8 @@ const Header = (props) => {
                 <a className={`hover:text-yellow ${props.home} duration-150 flex-shrink-0 truncate`} href="/">Home</a>
                 <a className={`hover:text-yellow ${props.aboutus} duration-150 flex-shrink-0 truncate`} href='about-us'>About Us</a>
                 <a className={`hover:text-yellow ${props.promotion} duration-150 flex-shrink-0 truncate`} href='promotion'>Promotion</a>
-                <a className={`hover:text-yellow ${props.order} duration-150 flex-shrink-0 truncate`} href='/order'>Order</a>
+                {/* <a className={`hover:text-yellow ${props.order} duration-150 flex-shrink-0 truncate`} href='/order'>Order</a> */}
+                <a className={`hover:text-yellow ${props.activities} duration-150 flex-shrink-0 truncate`} href='/activities'>Activities</a>
                 <a className={`hover:text-yellow ${props.menu} duration-150 flex-shrink-0 truncate`} href='/menu'>Menu</a>
                 <a className={`hover:text-yellow ${props.contactus} duration-150 flex-shrink-0 truncate`} href='contactus'>Contact Us</a> 
             </div>
@@ -87,10 +88,10 @@ const Header = (props) => {
                     <li className='my-5'><a className={`hover:text-yellow ${props.home} duration-150 flex-shrink-0 truncate`} href="/" >Home</a></li>
                     <li className='my-5'><a className={`hover:text-yellow ${props.aboutus} duration-150 flex-shrink-0 truncate`} href='about-us'>About Us</a></li>
                     <li className='my-5'><a className={`hover:text-yellow ${props.promotion} duration-150 flex-shrink-0 truncate`} href='promotion'>Promotion</a></li>
-                    <li className='my-5'><a  className={`hover:text-yellow ${props.order} duration-150 flex-shrink-0 truncate`} href='/order'>Order</a></li>
+                    {/* <li className='my-5'><a  className={`hover:text-yellow ${props.order} duration-150 flex-shrink-0 truncate`} href='/order'>Order</a></li> */}
                     <li className='my-5'><a className={`hover:text-yellow ${props.menu} duration-150 flex-shrink-0 truncate`} href='/menu'>Menu</a></li>
                     <li className='my-5'><a className={`hover:text-yellow ${props.contactus} duration-150 flex-shrink-0 truncate`} href='/contactus'>Contact US </a></li>
-                    <li className='my-5'><a className={`hover:text-yellow ${props.contactus} duration-150 flex-shrink-0 truncate`} href='/activities'>Activities</a></li>
+                    <li className='my-5'><a className={`hover:text-yellow ${props.activities} duration-150 flex-shrink-0 truncate`} href='/activities'>Activities</a></li>
                     
 
                 </ul>            
