@@ -13,4 +13,36 @@
     /* semi-transparent black color */
   }
   
+  @keyframes openAnimation {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes closeAnimation {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animate-open {
+    animation-name: openAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    
+  }
+  
+  .animate-close {
+    animation-name: closeAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+    
+  }
   

@@ -6,6 +6,7 @@ import {RxCross2} from "react-icons/rx";
 import { useState, useEffect } from 'react';
 const Header = (props) => {
     const [open, setOpen] = useState(false);
+    const [animationClass, setAnimationClass] = useState('');
 
     useEffect(() => {
         if (open) {
@@ -78,10 +79,10 @@ const Header = (props) => {
 
                     
         <nav className={`z-50 off-canvas-menu fixed h-screen top-0  w-1/2 mx-auto  sm:mx-0 bg-white md:hidden flex items-center
-        px-8 ${open ? 'right-0' : 'hidden'}`}>
+        px-8 ${open ? 'right-0' : 'hidden'} ${animationClass} `}>
             {/* Mobile Hamburger  */}
              
-                <a  className='menu-close-btn  absolute top-8 left-3' href="#" onClick={()=> setOpen(!open) } ><RxCross2 size='25px' /></a>        
+                <a  className='menu-close-btn  absolute top-8 left-3' href="#" onClick={()=> {setOpen(!open);    setAnimationClass(open ? 'animate-close' : 'animate-open'); }} ><RxCross2 size='25px' /></a>        
                 
        
                 <ul className=''>
