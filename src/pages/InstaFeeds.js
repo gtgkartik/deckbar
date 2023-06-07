@@ -7,7 +7,6 @@ const InstaFeeds = ({token, ...props}) => {
     //use useRef to store the latest value of the prop without firing the effect
     const tokenProp = useRef(token);
     tokenProp.current = token;
-
     useEffect(() => {
         // this is to avoid memory leaks
         const abortController = new AbortController();
@@ -15,7 +14,7 @@ const InstaFeeds = ({token, ...props}) => {
         async function fetchInstagramPost () {
           try{
             axios
-                .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${props.limit}&access_token=${props.token}`)
+                .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${props.limit}&access_token=${token}`)
                 .then((resp) => {
                     setFeedsData(resp.data.data)
                 })
