@@ -1,14 +1,29 @@
 import Field from "./Field";
 import Map from "./Map";
 import Socials from "./Socials";
-import { GrLocationPin } from "react-icons/gr";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import emailjs from '@emailjs/browser';
+import React, { useRef } from 'react';
 
 const EmailForm = (props) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_5oqiimy', 'template_7jcnit5', form.current, 'uYlQklS5Bt0Ds2gi9')
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent");
+
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <>
-      <form method="post">
+      <form ref={form} onSubmit={sendEmail}>
         <div className="flex flex-row justify-center mt-[80px] mb-20">
           <div className="flex flex-col justify-center   ">
             <div className="flex flex-col items-center mb-10">
@@ -20,10 +35,12 @@ const EmailForm = (props) => {
               </h1>
             </div>
 
-            <Field input="Email Address" />
-            <Field input="First Name" />
-            <Field input="Last Name" />
-            <Field input="Phone Number" />
+            <Field input="Email Address" type="email" name ="user_email"/>
+            <Field input="First Name"  name="user_name"/>
+            <Field input="Last Name" name= "user_lastname"/>
+            <Field input="Phone Number" type="text" name= "user_phonenumber" />
+            <Field input="Message" type="text" name= "user_message" />
+
             <div className="flex">
               <button className="rounded-md bg-black font-libre text-white hover:text-black hover:bg-yellow w-[140px] px-2 py-2 mt-10">
                 Submit
