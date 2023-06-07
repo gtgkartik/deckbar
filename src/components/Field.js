@@ -11,7 +11,7 @@ const Field = (props) => {
         <input
           required
           type={props.type}
-          className="h-12 text-[14px] w-full mt-1 px-3 py-[8px] rounded-sm border-[#dfe1e2] border-2 "
+          className={ `${props.height} text-[14px] w-full mt-1 px-3 py-[8px] rounded-sm border-[#dfe1e2] border-2`}
           name = {props.name}
         />
       </div>

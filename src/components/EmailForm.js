@@ -3,8 +3,8 @@ import Map from "./Map";
 import Socials from "./Socials";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import emailjs from '@emailjs/browser';
-import React, { useRef } from 'react';
+import emailjs from "@emailjs/browser";
+import React, { useRef } from "react";
 
 const EmailForm = (props) => {
   const form = useRef();
@@ -12,14 +12,22 @@ const EmailForm = (props) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_5oqiimy', 'template_7jcnit5', form.current, 'uYlQklS5Bt0Ds2gi9')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_5oqiimy",
+        "template_7jcnit5",
+        form.current,
+        "uYlQklS5Bt0Ds2gi9"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
           console.log("message sent");
-
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
   return (
     <>
@@ -35,11 +43,31 @@ const EmailForm = (props) => {
               </h1>
             </div>
 
-            <Field input="Email Address" type="email" name ="user_email"/>
-            <Field input="First Name"  name="user_name"/>
-            <Field input="Last Name" name= "user_lastname"/>
-            <Field input="Phone Number" type="text" name= "user_phonenumber" />
-            <Field input="Message" type="text" name= "user_message" />
+            <Field
+              input="Email Address"
+              type="email"
+              name="user_email"
+              height="h-12"
+            />
+            <Field input="First Name" name="user_name" height="h-12" />
+            <Field input="Last Name" name="user_lastname" height="h-12" />
+            <Field
+              input="Phone Number"
+              type="text"
+              name="user_phonenumber"
+              height="h-12"
+            />
+
+            <div className="flex flex-col mt-5 ls:w-[500px]">
+              <div className="flex flex-row space-x-1">
+                <label>Message</label>
+                <span className="text-red-600">*</span>
+              </div>
+              <textarea
+                name="user_message"
+                className={`h-[200px] text-[14px] w-full mt-1 px-3 py-[8px] rounded-sm border-[#dfe1e2] border-2`}
+              ></textarea>
+            </div>
 
             <div className="flex">
               <button className="rounded-md bg-black font-libre text-white hover:text-black hover:bg-yellow w-[140px] px-2 py-2 mt-10">
@@ -88,13 +116,13 @@ const EmailForm = (props) => {
 
           <div className="flex flex-row mt-3 font-libre space-x-2 items-center">
             <BsFillTelephoneFill size={20} />
-            <p>+65 6220 1820 /<br/> +65 8771 2549</p>
+            <p>
+              +65 6220 1820 /<br /> +65 8771 2549
+            </p>
           </div>
         </div>
         {/* End Of Text  */}
       </div>
-
-      
     </>
   );
 };
