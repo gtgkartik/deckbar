@@ -1,49 +1,69 @@
-import React from 'react'
+import React from "react";
+import { Link } from 'react-router-dom';
 
 const Feed = (props) => {
-    const { id, caption, media_type, media_url} = props.feed
-    let post;
+    
+    const redirectToWebsite = () => {
+        window.location.href = 'https://www.instagram.com/deckbarsg/';
+      };
+  const { id, caption, media_type, media_url } = props.feed;
+  let post;
 
-    switch (media_type) {
-        case "VIDEO":
-            post = (
-                <video
-                    width='50%'
-                    height='auto' 
-                    src={media_url} 
-                    type="video/mp4" 
-                    controls playsinline>
-                </video>
-            )
-            break;
-        case "CAROUSEL_ALBUM":
-            post = (
-                <img 
-                    width='100%'
-                    height='auto'
-                    id={id} 
-                    src={media_url} 
-                    alt={caption} 
-                />
-            );
-            break;
-        default:
-            post = (
-                <img 
-                    width='100%'
-                    height='auto'
-                    id={id} 
-                    src={media_url} 
-                    alt={caption} 
-                />
-            );
-    }       
+  switch (media_type) {
+    case "VIDEO":
+      break;
+    case "CAROUSEL_ALBUM":
+      post = (
+        <>
+        <Link onClick={redirectToWebsite}>
+        
+          <div class="max-w-sm hover:cursor-pointer rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+              <img
+                width="100%"
+                height="auto"
+                id={id}
+                src={media_url}
+                alt={caption}
+                
+              />
+              {/* <div class="font-bold text-xl mb-2">   {caption}</div> */}
+              <p class="text-gray-700 text-base">
+           
+              </p>
+            </div>
+          </div>
+          </Link>
+        </>
+      );
+      break;
+    default:
+      post = (
+        <>
+        <Link onClick={redirectToWebsite}>
+        
+          <div class="max-w-sm hover:cursor-pointer rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+              <img
+                width="100%"
+                height="auto"
+                id={id}
+                src={media_url}
+                alt={caption}
+                
+              />
+              {/* <div class="font-bold text-xl mb-2">   {caption}</div> */}
+              <p class="text-gray-700 text-base">
+           
+              </p>
+            </div>
+          </div>
+          </Link>
+        </>
+      );
+  }
 
-    return (
-        <React.Fragment>
-            {post}
-        </React.Fragment>
-    );
-}
+  return <React.Fragment>{post}</React.Fragment>;
+};
 
 export default Feed;

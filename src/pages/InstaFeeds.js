@@ -38,6 +38,7 @@ const InstaFeeds = ({ token, ...props }) => {
     <div class=" grid md:grid-cols-4 sm:grid-cols-1 ls:grid-cols-3 gap-2 mx-auto mt-[100px] md:px-20 ls:px-15 sm:px-10">
       {feeds.map((feed) => (
         
+        
           <Feed key={feed.id} feed={feed} />
         
       ))}
