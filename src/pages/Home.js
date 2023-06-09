@@ -56,7 +56,7 @@ const Home = () => {
               </h1>
               <div className="flex flex-row mt-3 font-libre space-x-2 items-center">
                 <MdEmail size={20} />
-                <p>enquiry@bluemist.sg</p>
+                <p>happyhut.sg@gmail.com</p>
               </div>
 
               <h1 className="font-libre text-md font-semibold pt-10">
@@ -66,7 +66,7 @@ const Home = () => {
               <div className="flex flex-row mt-3 font-libre space-x-2 items-center">
                 <BsFillTelephoneFill size={20} />
                 <p>
-                  +65 6220 1820 /<br /> +65 8771 2549
+                  +65 9887 3377
                 </p>
               </div>
             </div>
