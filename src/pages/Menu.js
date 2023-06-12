@@ -134,7 +134,7 @@ const Menu = () => {
           Menu
         </h1>
         <h1 className="ls:text-[15px] text-center texttitle sm:text-[14px] flex-wrap font-normal mt-6 font-libre overflow-hidden mx-0 px-4">
-          Refer to menu and WhatsApp us at 8771 2549 to place order between 10am
+          Refer to menu and WhatsApp us at 9887 3377 to place order between 10am
           to 11pm Monday – Saturday. <br /> Menu price is subjected to 8% GST
           for Takeaways.
         </h1>
