@@ -107,7 +107,7 @@ const EmailForm = (props) => {
           </h1>
           <div className="flex flex-row mt-3 font-libre space-x-2 items-center">
             <MdEmail size={20} />
-            <p>enquiry@bluemist.sg</p>
+            <p>happyhut.sg@gmail.com</p>
           </div>
 
           <h1 className="font-libre text-md font-semibold pt-10">
