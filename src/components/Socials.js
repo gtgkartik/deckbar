@@ -20,9 +20,6 @@ const Socials = () => {
             <li className="bg-[#25d366] w-[50px] h-[50px]  flex items-center justify-center rounded-md mx-2">
               <a><BsWhatsapp  size= "25px" color="white"/></a> 
             </li>
-            <li className="bg-[#2ca5e0] w-[50px] h-[50px]  flex items-center justify-center rounded-md mx-2">
-              <a><BsTelegram  size= "25px" color="white"/></a> 
-            </li>
           </ul>
         </div>
       </div>
