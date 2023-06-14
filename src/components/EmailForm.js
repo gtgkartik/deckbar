@@ -117,7 +117,7 @@ const EmailForm = (props) => {
           <div className="flex flex-row mt-3 font-libre space-x-2 items-center">
             <BsFillTelephoneFill size={20} />
             <p>
-              +65 6220 1820 /<br /> +65 8771 2549
+              +65 9877 3377 <br />
             </p>
           </div>
         </div>
