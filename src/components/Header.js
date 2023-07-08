@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { BsBag } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 const Header = (props) => {
   const [open, setOpen] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
@@ -18,7 +19,7 @@ const Header = (props) => {
 
   return (
     <>
-      <nav>
+      <motion.nav >
         <div className="md:px-[120px] ls:px-[80px] sm:px-[30px] py-8 mx-auto sm:flex items-center justify-between  ">
           <div className="flex items-center">
             <a
@@ -151,7 +152,7 @@ const Header = (props) => {
             </li>
           </ul>
         </nav>
-      </nav>
+      </motion.nav>
     </>
   );
 };

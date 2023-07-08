@@ -2,10 +2,12 @@ import Header from "../components/Header";
 import HeaderImage from "../components/HeaderImage";
 import image1 from '../Images/originalimages/1.jpg'
 import image2 from '../Images/originalimages/2.jpg'
+import { motion } from "framer-motion"
 
 const Promotion = () => {
   return (
     <>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}}>
       <Header promotion="text-yellow" />
       <HeaderImage
         title="Promotion"
@@ -51,7 +53,7 @@ const Promotion = () => {
         </div>
       </div>
 
-    
+      </motion.div>
     </>
   );
 };

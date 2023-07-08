@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Gallerystyles.css";
+import { motion } from "framer-motion";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -46,7 +47,7 @@ const Gallery = () => {
   return (
     <div className="flex flex-col ">
       <h1 className="flex justify-center font-libre md:text-3xl sm:text-2xl font-semibold mb-[30px] sm:mt-[100px] md:mt-[10px] ">
-        Order Food Now
+        Come Visit Us Now 
       </h1>
       <Carousel
         responsive={responsive}
@@ -68,7 +69,7 @@ const Gallery = () => {
       </Carousel>
       <div className="flex justify-center mt-[20px]">
         <button class="bg-black hover:bg-yellow text-white font-libre font-bold py-2 px-6 rounded">
-          Order Now
+         Check out Gallery
         </button>
       </div>
     </div>

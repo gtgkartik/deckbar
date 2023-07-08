@@ -10,11 +10,12 @@ import AboutUs from "../components/AboutUs";
 import Map from "../components/Map";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { motion } from "framer-motion"
 
 const Home = () => {
   return (
     <>
-      <div className="w-screen h-auto flex flex-col">
+      <motion.div className="w-screen h-auto flex flex-col" initial = {{opacity: 0,backgroundColor:"yellow", y:-300}} animate = {{opacity:1, backgroundColor:"white",y:0}} >
         <Header home="text-yellow" />
         <Slider />
         <AboutUs />
@@ -74,7 +75,7 @@ const Home = () => {
           </div>
           <Footer />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

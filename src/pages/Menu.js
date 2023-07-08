@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HeaderImage from "../components/HeaderImage";
 import MenuCard from "../components/MenuCard";
-
+import { motion } from "framer-motion";
 const records = [
   {
     id: 1,
@@ -123,6 +123,7 @@ const records = [
 const Menu = () => {
   return (
     <>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}}>
       <Header menu="text-yellow" />
       <HeaderImage
         title="Menu"
@@ -144,6 +145,7 @@ const Menu = () => {
       </div>
 
       <Footer />
+      </motion.div>
     </>
   );
 };

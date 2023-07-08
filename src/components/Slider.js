@@ -55,7 +55,7 @@ const Slider = () => {
             So Casual So Chill! <br /> Feel Good, feel Power up !
           </h1>
           <button className="bg-white hover:bg-black hover:text-white text-black font-libre py-2 w-[200px] mt-5 rounded">
-            <a href="/order">Order Now</a>
+            <a href="/order">Menu</a>
           </button>
         </div>
       </div>

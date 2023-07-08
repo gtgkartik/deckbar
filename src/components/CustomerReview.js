@@ -1,4 +1,3 @@
-import ReviewCard from "./ReviewCard";
 const reviews = [
   {
     author_name: "cai me",

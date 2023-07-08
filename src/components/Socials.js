@@ -1,6 +1,6 @@
 import { FacebookProvider, EmbeddedPost } from "react-facebook";
-
 import { IconName, BsFacebook ,BsInstagram, BsWhatsapp, BsTelegram } from "react-icons/bs";
+import { motion } from "framer-motion"
 
 const Socials = () => {
   return (
@@ -11,15 +11,15 @@ const Socials = () => {
         </h1>
         <div className="flex justify-center">
           <ul className="flex items-center justify-center  ">
-            <li className="bg-[#3b5998] w-[50px] h-[50px]  flex items-center justify-center rounded-md mx-2">
-              <a><BsFacebook  size= "25px" color="white"/> </a>
-            </li>
-            <li className="bg-[#EFD9D9] w-[50px] h-[50px]  flex items-center justify-center rounded-md mx-2">
-              <a><BsInstagram  size= "25px" color="#E33030"/> </a>
-            </li>
-            <li className="bg-[#25d366] w-[50px] h-[50px]  flex items-center justify-center rounded-md mx-2">
-              <a><BsWhatsapp  size= "25px" color="white"/></a> 
-            </li>
+            <motion.li whileHover={{scale:1.2}} className="mx-2 ">
+              <a href= "https://www.facebook.com/deckbar.sg" className="bg-[#3b5998] w-[50px] h-[50px] flex items-center justify-center rounded-md  " target="#"><BsFacebook  size= "25px" color="white"/> </a>
+            </motion.li>
+            <motion.li whileHover={{scale:1.2}} className="mx-2">
+              <a href= "https://www.instagram.com/deckbarsg/" className="bg-[#EFD9D9] w-[50px] h-[50px]  flex items-center justify-center rounded-md" target="#"><BsInstagram  size= "25px" color="#E33030"/> </a>
+            </motion.li>
+            <motion.li whileHover={{scale:1.2}} className=" mx-2">
+              <a href="https://wa.me/6598773377" className="bg-[#25d366] w-[50px] h-[50px]  flex items-center justify-center rounded-md" target="#"><BsWhatsapp  size= "25px" color="white"/></a> 
+            </motion.li>
           </ul>
         </div>
       </div>
