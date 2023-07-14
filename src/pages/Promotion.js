@@ -19,8 +19,8 @@ import image16 from '../Images/originalimages/16.jpg'
 import image17 from '../Images/originalimages/17.jpg'
 import image18 from '../Images/originalimages/18.jpg'
 import image19 from '../Images/originalimages/19.jpg'
-import image20 from '../Images/originalimages/21.jpg'
-import image21 from '../Images/originalimages/22.jpg'
+import image20 from '../Images/originalimages/20.jpg'
+import image21 from '../Images/originalimages/21.jpg'
 import image22 from '../Images/originalimages/22.jpg'
 import image23 from '../Images/originalimages/23.jpg'
 import image24 from '../Images/originalimages/24.jpg'
@@ -40,9 +40,42 @@ import image37 from '../Images/originalimages/37.jpg'
 import image38 from '../Images/originalimages/38.jpg'
 import image39 from '../Images/originalimages/39.jpg'
 import image40 from '../Images/originalimages/40.jpg'
-import image41 from '../Images/originalimages/25.jpg'
-import image42 from '../Images/originalimages/25.jpg'
-import image43 from '../Images/originalimages/25.jpg'
+import image41 from '../Images/originalimages/41.jpg'
+import image42 from '../Images/originalimages/42.jpg'
+import image43 from '../Images/originalimages/43.jpg'
+import image44 from '../Images/originalimages/44.jpg'
+import image45 from '../Images/originalimages/45.jpg'
+import image46 from '../Images/originalimages/46.jpg'
+import image47 from '../Images/originalimages/47.jpg'
+import image48 from '../Images/originalimages/48.jpg'
+import image49 from '../Images/originalimages/49.jpg'
+import image50 from '../Images/originalimages/50.jpg'
+import image51 from '../Images/originalimages/51.jpg'
+import image52 from '../Images/originalimages/52.jpg'
+import image53 from '../Images/originalimages/53.jpg'
+import image54 from '../Images/originalimages/54.jpg'
+import image55 from '../Images/originalimages/55.jpg'
+import image56 from '../Images/originalimages/56.jpg'
+import image57 from '../Images/originalimages/57.jpg'
+import image58 from '../Images/originalimages/58.jpg'
+import image59 from '../Images/originalimages/59.jpg'
+import image60 from '../Images/originalimages/60.jpg'
+import image61 from '../Images/originalimages/61.jpg'
+import image62 from '../Images/originalimages/62.jpg'
+import image63 from '../Images/originalimages/63.jpg'
+import image64 from '../Images/originalimages/64.jpg'
+import image65 from '../Images/originalimages/65.jpg'
+import image66 from '../Images/originalimages/66.jpg'
+import image67 from '../Images/originalimages/67.jpg'
+import image68 from '../Images/originalimages/68.jpg'
+import image69 from '../Images/originalimages/69.jpg'
+import image70 from '../Images/originalimages/70.jpg'
+
+
+
+
+
+
 
 
 
@@ -51,11 +84,12 @@ import image43 from '../Images/originalimages/25.jpg'
 
 
 import { motion } from "framer-motion"
+import Footer from "../components/Footer";
 
 const Promotion = () => {
   return (
     <>
-    <motion.div initial={{opacity:0}} animate={{opacity:1}}>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mb-20">
       <Header promotion="text-yellow" />
       <HeaderImage
         title="Promotion"
@@ -366,10 +400,208 @@ const Promotion = () => {
             className="w-full h-full object-cover rounded-md"
           />
         </div>
+        <div class="w-full rounded">
+          <img
+            src= {image44}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image45}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image46}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image47}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image48}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image49}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image50}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+
+        <div class="w-full rounded">
+          <img
+            src= {image51}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image52}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image53}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image54}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image55}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image56}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image57}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image58}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image59}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image60}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image61}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image62}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image63}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image64}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image65}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image66}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image67}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image68}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image69}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image70}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div class="w-full rounded">
+          <img
+            src= {image43}
+            alt="image"
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
  
       </div>
 
       </motion.div>
+      <Footer/>
     </>
   );
 };

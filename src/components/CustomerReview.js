@@ -37,7 +37,7 @@ const reviews = [
       "https://lh3.googleusercontent.com/a-/AD_cMMSg95W-3fy7Bc-ysS0RZ_vXaopRF3FJmtTrXptBzg=s128-c0x00000000-cc-rp-mo-ba4",
     rating: 4,
     relative_time_description: "6 months ago",
-    text: "Decent price for drinks. It had great live music. Pretty cool place",
+    text: "Decent price for drinks. It had great live music. Pretty cool place. Ambience is quite nice and it's a nice calm place to chill. The drinks are cheap too. However the food is just okay. The food is great and the staff are very friendly and accommodating. The ambience of the bar itself is very chill so it\u2019s a nice place to hang out.",
     time: 1668174049,
     translated: false,
   },
@@ -65,7 +65,7 @@ const reviews = [
       "https://lh3.googleusercontent.com/a/AAcHTtceOMeMfE5Yr0FLNGxF8r37yoLTAcY4evRYUHKH=s128-c0x00000000-cc-rp-mo",
     rating: 5,
     relative_time_description: "a month ago",
-    text: "My son says the fish and chips is the best he ever had!!!",
+    text: "My son says the fish and chips is the best he ever had!!!The food is great and the staff are very friendly and accommodating.",
     time: 1681563832,
     translated: false,
   },
@@ -172,7 +172,7 @@ const CustomerReview = () => {
             What our customers are saying about us
           </h1>
         </div>
-        <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
+        <div className=" flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
           {reviews.map((review) => {
             return (
               <>

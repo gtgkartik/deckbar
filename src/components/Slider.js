@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "./Slider.css";
+import image1 from '../Images/homeimages/1.jpg'
+import image2 from '../Images/homeimages/4.jpg'
+import image3 from '../Images/homeimages/5.jpg'
+import image4 from '../Images/homeimages/8.jpg'
+
+
+
 const Slider = () => {
   const [currentIndex, setcurrentIndex] = useState(1);
 
@@ -17,16 +24,16 @@ const Slider = () => {
 
   const slides = [
     {
-      url: "https://images.unsplash.com/photo-1618946503071-61626b5d5125?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      url: image4,
     },
     {
-      url: "https://images.unsplash.com/photo-1635321593217-40050ad13c74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80",
+      url: image2,
     },
     {
-      url: "https://images.unsplash.com/photo-1579065934361-0a0c8771812a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      url: image3,
     },
     {
-      url: "https://images.unsplash.com/photo-1617562593428-9dfd3376a14e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      url: image1,
     },
   ];
   return (
