@@ -52,8 +52,8 @@ const Header = (props) => {
             </a>
             {/* <a className={`hover:text-yellow ${props.order} duration-150 flex-shrink-0 truncate`} href='/order'>Order</a> */}
             <a
-              className={`hover:text-yellow ${props.activities} duration-150 flex-shrink-0 truncate`}
-              href="/activities"
+              className={`hover:text-yellow ${props.gallery} duration-150 flex-shrink-0 truncate`}
+              href="/gallery"
             >
               Gallery
             </a>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import ImageOverImage from "./ImagesOverImage";
 
@@ -66,9 +67,11 @@ const AboutUs2 = () => {
               For reservation of tables, WhatsApp us at +65 9887 3377
             </div>
             <div className="">
-              <button className="rounded-sm bg-black hover:bg-yellow text-white px-7 py-2">
+        <Link to="/menu">
+        <button className="rounded-sm bg-black hover:bg-yellow text-white px-7 py-2">
                 Menu
               </button>
+        </Link>
             </div>
           </div>
         </div>

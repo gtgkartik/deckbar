@@ -5,6 +5,7 @@ import image1 from '../Images/homeimages/1.jpg'
 import image2 from '../Images/homeimages/4.jpg'
 import image3 from '../Images/homeimages/5.jpg'
 import image4 from '../Images/homeimages/8.jpg'
+import { Link } from "react-router-dom";
 
 
 
@@ -24,13 +25,13 @@ const Slider = () => {
 
   const slides = [
     {
+      url: image3,
+    },
+    {
       url: image4,
     },
     {
       url: image2,
-    },
-    {
-      url: image3,
     },
     {
       url: image1,
@@ -61,9 +62,12 @@ const Slider = () => {
           <h1 className="font-libre text-white md:text-[40px] ls:text-[30px] sm:text-[25px]">
             So Casual So Chill! <br /> Feel Good, feel Power up !
           </h1>
+          <Link to="/menu">
           <button className="bg-white hover:bg-black hover:text-white text-black font-libre py-2 w-[200px] mt-5 rounded">
-            <a href="/order">Menu</a>
+            <a href="/menu">Menu</a>
           </button>
+          </Link>
+
         </div>
       </div>
     </>

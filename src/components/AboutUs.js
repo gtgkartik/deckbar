@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ImageOverImage from "./ImagesOverImage";
 
 const AboutUs = () => {
@@ -35,7 +36,9 @@ const AboutUs = () => {
                         For reservation of tables, WhatsApp us at +65 9887 3377
                     </div>
                     <div className="">
+                        <Link to="/menu">
                         <button className="rounded-sm bg-black hover:bg-yellow text-white px-7 py-2">Menu</button>
+                        </Link>
                     </div>
                 </div>
             </div>

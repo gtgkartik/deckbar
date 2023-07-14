@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Gallerystyles.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -68,9 +69,12 @@ const Gallery = () => {
         })}
       </Carousel>
       <div className="flex justify-center mt-[20px]">
+        <Link to="/gallery">
         <button class="bg-black hover:bg-yellow text-white font-libre font-bold py-2 px-6 rounded">
          Check out Gallery
         </button>
+        </Link>
+
       </div>
     </div>
   );
