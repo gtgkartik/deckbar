@@ -23,7 +23,7 @@ const Header = (props) => {
         <div className="md:px-[120px] ls:px-[80px] sm:px-[30px] py-8 mx-auto sm:flex items-center justify-between  ">
           <div className="flex items-center">
             <a
-              href="#"
+              href="/"
               className="logo text-2xl text-yellow flex-shrink-0 truncate"
             >
               Deck Bar

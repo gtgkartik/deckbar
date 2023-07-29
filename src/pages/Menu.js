@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import HeaderImage from "../components/HeaderImage";
 import MenuCard from "../components/MenuCard";
 import { motion } from "framer-motion";
+import image from '../Images/homeimages/22.jpg'
+
 const records = [
   {
     id: 1,
@@ -127,7 +129,7 @@ const Menu = () => {
       <Header menu="text-yellow" />
       <HeaderImage
         title="Menu"
-        imageurl="https://images.unsplash.com/photo-1573551565922-aec98de55802?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        imageurl={image}
       />
 
       <div className="flex flex-col items-center mb-[90px] mt-[100px]">

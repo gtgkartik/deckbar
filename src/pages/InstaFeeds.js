@@ -2,6 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Feed from "./Feed";
 
+
+
+
+
+
 const InstaFeeds = ({ token, ...props }) => {
   const [feeds, setFeedsData] = useState([]);
   //use useRef to store the latest value of the prop without firing the effect
@@ -37,11 +42,10 @@ const InstaFeeds = ({ token, ...props }) => {
   return (
     <div class=" grid md:grid-cols-4 sm:grid-cols-1 ls:grid-cols-3 gap-2 mx-auto mt-[100px] md:px-20 ls:px-15 sm:px-10">
       {feeds.map((feed) => (
-        
-        
           <Feed key={feed.id} feed={feed} />
-        
+
       ))}
+
     </div>
   );
 };

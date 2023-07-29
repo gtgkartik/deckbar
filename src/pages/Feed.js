@@ -17,7 +17,7 @@ const Feed = (props) => {
         <>
         <Link onClick={redirectToWebsite}>
         
-          <div class="max-w-sm hover:cursor-pointer rounded overflow-hidden shadow-lg">
+          <div className="max-w-sm hover:cursor-pointer rounded overflow-hidden shadow-lg">
             <div class="px-6 py-4">
               <img
                 width="100%"
@@ -28,9 +28,7 @@ const Feed = (props) => {
                 
               />
               {/* <div class="font-bold text-xl mb-2">   {caption}</div> */}
-              <p class="text-gray-700 text-base">
-           
-              </p>
+
             </div>
           </div>
           </Link>
