@@ -1,7 +1,5 @@
 import "./Header.css";
-import { AiOutlineUser, AiOutlineHeart, AiOutlineSearch } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { BsBag } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";

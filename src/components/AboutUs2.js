@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
-import ImageOverImage from "./ImagesOverImage";
+import image1 from '../Images/about/image.jpg'
+import image2 from '../Images/about/image2.jpg'
+
 
 const AboutUs2 = () => {
   return (
@@ -82,13 +84,13 @@ const AboutUs2 = () => {
             <div className="mb-[50px]">
               <img
                 className="w-[400px] rounded-xl shadow-xl"
-                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=781&q=80"
+                src={image1}
               />
             </div>
             <div>
               <img
                 className="w-[400px] rounded-xl shadow-xl"
-                src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=780&q=80"
+                src={image2}
               />
             </div>
           </div>

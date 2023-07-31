@@ -71,10 +71,11 @@ const Test = () => {
   return (
     <>
     <motion.div initial={{opacity:0}} animate={{opacity:1}} >
-        <Header activities="text-yellow" />
+        <Header gallery="text-yellow"  />
       <HeaderImage
         title="Gallery"
         imageurl={image}
+        
       />
         <InstaFeeds token={process.env.REACT_APP_INS_TOKEN} limit={12} />
          <div class=" grid md:grid-cols-4 sm:grid-cols-1 ls:grid-cols-3 gap-5 mx-auto mt-[100px] md:px-20 ls:px-15 sm:px-10">
