@@ -6,7 +6,7 @@ console.log(process.env.REACT_APP_GOOGLE_MAPS)
 
 export default function Map() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS,
   });
 
   if (!isLoaded) return <div>Loading...</div>;
