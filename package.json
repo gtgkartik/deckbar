@@ -20,7 +20,7 @@
     "react-facebook": "^9.0.12",
     "react-icons": "^4.8.0",
     "react-multi-carousel": "^2.8.3",
-    "react-router-dom": "^6.11.0",
+    "react-router-dom": "^6.4.4",
     "react-scripts": "5.0.1",
     "serpapi": "^1.1.1",
     "web-vitals": "^2.1.4"
