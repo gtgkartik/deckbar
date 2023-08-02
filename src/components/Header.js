@@ -143,7 +143,7 @@ const Header = (props) => {
             <li className="my-5">
               <a
                 className={`hover:text-yellow ${props.activities} duration-150 flex-shrink-0 truncate`}
-                href="/activities"
+                href="/gallery"
               >
                 Gallery
               </a>
