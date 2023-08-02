@@ -12,6 +12,7 @@ import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { motion } from "framer-motion"
 
+
 const Home = () => {
   return (
     <>
@@ -19,7 +20,7 @@ const Home = () => {
         <Header home="text-yellow" />
         <Slider />
         <AboutUs />
-        <BottomNavbar />
+        {/* <BottomNavbar /> */}
         <Gallery />
         <CustomerReview />
         <div className="flex flex-col mt-[100px]">

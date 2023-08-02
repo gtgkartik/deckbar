@@ -44,7 +44,7 @@ const AboutUs = () => {
             </div>
             
             {/* Right HandSide  */}
-            <div className="sm:pt-10 md:w-[40%] flex justify-center md:relative md:right-12 sm:w-[100%]">
+            <div className="sm:pt-10 px-10 md:w-[40%] flex justify-center md:relative md:right-12 sm:w-[100%]">
                 <ImageOverImage/>
                
             </div>

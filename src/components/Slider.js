@@ -59,8 +59,9 @@ const Slider = () => {
           <h1 className="font-libre text-white md:text-[15px] ls:text-[15px] sm:text-[13px]  mb-5 sm:justify-center">
             A rare cosy void deck space for you
           </h1>
-          <h1 className="font-libre text-white md:text-[40px] ls:text-[30px] sm:text-[25px]">
-            So Casual So Chill! <br /> Feel Good, feel Power up !
+          <h1 className="font-libre text-white md:text-[30px] ls:text-[30px] sm:text-[25px]">
+          Unwind and Enjoy the Relaxing<br />Vibes at Our Deckbar Oasis <br />
+          {/* Nestled among lush greenery <br/> and tranquility DeckLife */}
           </h1>
           <Link to="/menu">
           <button className="bg-white hover:bg-black hover:text-white text-black font-libre py-2 w-[200px] mt-5 rounded">
@@ -73,5 +74,5 @@ const Slider = () => {
     </>
   );
 };
-
+// ,  #EscapeToNature
 export default Slider;

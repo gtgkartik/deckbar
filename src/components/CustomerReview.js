@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 const reviews = [
   {
     author_name: "cai me",
@@ -72,98 +75,23 @@ const reviews = [
 ];
 
 const CustomerReview = () => {
-  const photos = [
-    {
-      height: 1816,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/111880125737102328587"\u003eDeck Bar\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0nbUXcBmM5tcU-h8cXE0DKwE-q9liH_zzKs0_E1uX0Aerk6Ad5sfVNzhw_YLDZiyZFZftkywtWUuBnjv0jnCeXbNLw30zg8fSINq0opaNQcl3T_IqHu3aGGfAXrYUEaGYB8YnQiKR59sgX6x2F-07YMkeDZxB_0feB8zjjMHK70O93q",
-      width: 4032,
-    },
-    {
-      height: 400,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/111880125737102328587"\u003eDeck Bar\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0m32DufciXrmPjZVfhrwVm4zeCopzNFvZEhqaHCd6yLjlTCA7970PCxOoWz7o6tdIC_mdOdtWjW_F_-Gcey4BavUD4_talhhYvj1x4PFuZKPWcWoVgwdARwClkaw4-V0pyJ468AI8Hbtzg2gKRO7hbMwU2WcRfkKYwMdD3ZfKQ53KYU",
-      width: 400,
-    },
-    {
-      height: 4032,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/111880125737102328587"\u003eDeck Bar\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0kvle4ILg94dCELbaGnHSDLyivzEoG9WVyvUaBxsOVAlEI0PXwXUJqCwfSzYLNOcHleD5P6Gq6lJQ1UVNWDUqfB5YDA9HMEArOfl8wm5S_5T9Z-GfEtMYRzLfZncN7alGugRjP8vqjtmehq7EWp74xpGKU8dF2jsDpCK8lUnXtZDEWL",
-      width: 3024,
-    },
-    {
-      height: 1744,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/111880125737102328587"\u003eDeck Bar\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0mjWsF0SEtQQskL4vKRdA2c2SVkc1KC1_MfeA608nrOwd_WU-BBIThB4ccRvP3nCWyUPdpimel4BzwTKUdUwhFVL_hsipwn9HFD2gyJuLOpolH6aJUCrOV2QbjmydhWQh4l82kcqcugSRsJ3925MIZt7Mc0NRYU6JrbsGPFsVha2ntb",
-      width: 2200,
-    },
-    {
-      height: 1872,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/111880125737102328587"\u003eDeck Bar\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0lZvm-tqSgYiTF_o6z3cVu54wxmWnt2NkmUiR_sojgs-RYXv2Dr3HL7S-u6iuWktZkQ4l3-aeAcb8m10WrpzpusfS60BM53mSGuyvRzsmy8kpdh0I1Ramn9yPOtzIasaCN-oQMsmpDOeyu5A82mE4gzhz3HSZn_6cEFxzLyT-ZBaehk",
-      width: 2560,
-    },
-    {
-      height: 2252,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/103331270735393175501"\u003eAlexP Su\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0mcm59nnj_bh3ohBLo9RLvsT7zRB9v3Tc0pxf1AfR7Bv3ZVPrAnOfH0ZI7JjjS_60gXlaicGiQp1fDp5iKtkDDesUaHeojuYnZuwwiJms_Rsi4r7HYAmo8EWbttMrlbd9FWnhTE0pxmyz9Dq-vgxmftO3adCh6zLd_Jx4pliMVrRI85",
-      width: 4000,
-    },
-    {
-      height: 400,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/111880125737102328587"\u003eDeck Bar\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0khjqmUZUq3bCQCK7l_jcQAMhHiB-bIFLsi8bfZfCws4PcHp7_Pn2BF2vH8e7vIJaqPr7WpJrwksUJ_a4S2FOIjQuq7aX3jrdwZYDdl24wX1NqzIn2NxzeoMO77ZfQHxj29BdvF1NmgQ8BiR3EsfV1jTvjjDsKqbw8bFXok16A-Y38P",
-      width: 400,
-    },
-    {
-      height: 1533,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/100804884110434733086"\u003eSaleem Karimi\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0nppmqiLX0m23rJAKCRK-FTWYrS_muFuPptyKoANUc6OdFob5eptL1bue47DkgGAV2f0OENesXjlkQ6PoCABmQKQU8xswqba7vTNcF_HvUFD6Z5eFKyx4VI7MpbnppG39ooXJG94095LVVmXw5DABCtQMsP9cq1dPJwV5nw2ZlPgcxO",
-      width: 2043,
-    },
-    {
-      height: 1200,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/111880125737102328587"\u003eDeck Bar\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0lb7fkC2qoVS05I3nO6PypU1oGzcerNKxcGYMFt_Jqrb3Fzun552btVkoIenBStHx2hj1Axjm18jKnA0aNRcmon7jE4_svv3eDfjG8JN9UIgR0NJnwY329qwHV6IXt8sHbBVDy4SHaBhvCvZiyWLhIKMgXcLOhKD4m-eFaDbquXGxn6",
-      width: 1599,
-    },
-    {
-      height: 1287,
-      html_attributions: [
-        '\u003ca href="https://maps.google.com/maps/contrib/111880125737102328587"\u003eDeck Bar\u003c/a\u003e',
-      ],
-      photo_reference:
-        "AZose0l3BlsvOYEL5nZ3bpw4MBm37jb8vgiKaCEkCP4IG72TnGExvotdwpX9D8zSjldaMfUdd7xSswuH4U--xKkQqlvJGmrdDqNYrd6q5Cz6TcnX8ayUtXGP8jGHkF5yNrLgTSBI4pb0RdvBEzlb_c54Bfpsc7w3P-nZ9gmPO1pa0Sd_7Amh",
-      width: 1067,
-    },
-  ];
+
+    fetch("'https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJS6au6ssZ2jERyc-n--OV4j4&key=AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs'",{
+      method: "GET",
+      headers: {
+        "access-control-allow-origin" : "*",
+        // 'Content-Type' :
+      }})
+    .then(res => {
+      if (res.ok){
+        console.log("Success"); 
+      }  else {
+        console.log("fail")
+      }
+    })
+    .then(data => console.log(data))
+    .catch(err => console.log("error"))
+
   return (
     <>
       <section className="mt-[90px] py-[30px]  bg-[#eeeeee] dark:text-gray-100">
@@ -212,6 +140,8 @@ const CustomerReview = () => {
                     <p className="text-sm uppercase"></p>
                   </div>
                 </div>
+
+                
               </>
             );
           })}
