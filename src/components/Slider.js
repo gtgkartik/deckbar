@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "./Slider.css";
-import image1 from '../Images/homeimages/1.jpg'
-import image2 from '../Images/homeimages/4.jpg'
-import image3 from '../Images/homeimages/5.jpg'
-import image4 from '../Images/homeimages/8.jpg'
+import image1 from "../Images/homeimages/1.jpg";
+import image2 from "../Images/homeimages/4.jpg";
+import image3 from "../Images/homeimages/5.jpg";
+import image4 from "../Images/homeimages/8.jpg";
 import { Link } from "react-router-dom";
-
-
 
 const Slider = () => {
   const [currentIndex, setcurrentIndex] = useState(1);
@@ -25,27 +23,26 @@ const Slider = () => {
 
   const slides = [
     {
-      url: image3,
-    },
-    {
-      url: image4,
-    },
-    {
       url: image2,
     },
     {
       url: image1,
     },
+    {
+      url: image3,
+    },
+    {
+      url: image4,
+    },
   ];
   return (
     <>
-      <div className="w-full md:h-[650px] m-auto relative sm:h-[550px]  bg-gradient-to-tl from-gray-700 to-gray-700">
+      <div className="w-full md:h-[650px] m-auto relative sm:h-[550px]  bg-gradient-to-tl from-gray-700 to-gray-600">
         {/* Image */}
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           className="w-full h-full bg-center bg-cover duration-500 mix-blend-overlay absolute "
-        >
-        </div>
+        ></div>
         {/* left arrow  */}
         <div className="absolute z-10 top-[50%] cursor-pointer left-5">
           <IoIosArrowBack onClick={prevSlide} color="white" size="30px" />
@@ -56,19 +53,17 @@ const Slider = () => {
         </div>
         {/* Text and titles  */}
         <div className=" flex flex-col absolute md:top-[350px] ls:top-[300px] sm:top-[350px] ls:pl-[100px] sm:pl-[50px] ">
-          <h1 className="font-libre text-white md:text-[15px] ls:text-[15px] sm:text-[13px]  mb-5 sm:justify-center">
-            A rare cosy void deck space for you
+          <h1 className="font-libre font-medium italic text-white md:text-[38px] ls:text-[30px] sm:text-[20px]  mb-5 sm:justify-center ">
+            DeckBar: Delicious Food and Live Music
           </h1>
-          <h1 className="font-libre text-white md:text-[30px] ls:text-[30px] sm:text-[25px]">
-          Unwind and Enjoy the Relaxing<br />Vibes at Our Deckbar Oasis <br />
-          {/* Nestled among lush greenery <br/> and tranquility DeckLife */}
+          <h1 className="font-libre italic font-normal tracking-wider text-white md:text-[20px] ls:text-[15px] sm:text-[15px] ">
+          "Cultural Fusion, Delicious Cuisine, Unforgettable Moments."
           </h1>
           <Link to="/menu">
-          <button className="bg-white hover:bg-black hover:text-white text-black font-libre py-2 w-[200px] mt-5 rounded">
-            <a href="/menu">Menu</a>
-          </button>
+            <button className="bg-white hover:bg-black hover:text-white text-black font-libre py-2 w-[200px] mt-5 rounded">
+              <a href="/menu">Menu</a>
+            </button>
           </Link>
-
         </div>
       </div>
     </>

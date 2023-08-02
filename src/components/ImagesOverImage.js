@@ -8,7 +8,7 @@ const ImageOverImage = () => {
         <>
             <div className="relative mx-auto ">
                 <img className="rounded-lg ls:w-[500px] md:w-[300px] md:h-[400px]  shadow-lg shadow-black/50 object-cover" src= {image1}/>
-                <img className="sm:w-[300px] sm:top-[280px] sm:h-[290px] ls:h-[300px] sm:left-[120px] ls:top-[300px] md:absolute md:top-[300px] md:left-[100px] shadow-lg md:w-[300px] h-[300px] sm:absolute sm:top-[400px] sm:left-[200px] rounded-lg object-cover  shadow-black/50" src= {image2}/>
+                <img className="sm:w-[300px] sm:top-[230px] sm:h-[300px] ls:h-[300px]  ls:top-[300px] md:absolute md:top-[300px] md:left-[100px] ls:left-[200px] shadow-lg md:w-[300px] h-[300px] sm:absolute sm:left-[119px] rounded-lg object-cover  shadow-black/50" src= {image2}/>
             </div>
 
             

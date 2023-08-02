@@ -5,8 +5,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        libre :  "'Libre Baskerville', serif",
-        archi : "'Architects Daughter', cursive"
+        libre :  "'Libre Baskerville', serif",    
+        archi : "'Architects Daughter', cursive",
+        mont : "'Montserrat', sans-serif"
       },
 
       width: {
