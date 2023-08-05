@@ -66,7 +66,7 @@ const AboutUs2 = () => {
               life.
             </div>
             <div className="py-10 leading-7">
-              For reservation of tables, WhatsApp us at +65 9887 3377
+              For reservation of tables, WhatsApp us at +65 98873377
             </div>
             <div className="">
         <Link to="/menu">

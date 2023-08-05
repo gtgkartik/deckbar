@@ -68,7 +68,7 @@ const Home = () => {
               <div className="flex flex-row mt-3 font-libre space-x-2 items-center">
                 <BsFillTelephoneFill size={20} />
                 <p>
-                  +65 9887 3377
+                  +65 98873377
                 </p>
               </div>
             </div>
