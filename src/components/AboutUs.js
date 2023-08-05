@@ -33,7 +33,7 @@ const AboutUs = () => {
                         Come and discover the true essence of alfresco dining at our bar—a place where flavors mingle, conversations flow, and unforgettable memories are made. We look forward to welcoming you to our Deck Bar, where every sip and every bite is a celebration of the good life.
                     </div> */}
                     <div className="py-10 leading-7">
-                        For reservation of tables, WhatsApp us at +65 9887 3377
+                        For reservation of tables, WhatsApp us at +65 98873377
                     </div>
                     <div className="">
                         <Link to="/menu">

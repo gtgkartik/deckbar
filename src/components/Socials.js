@@ -18,7 +18,7 @@ const Socials = () => {
               <a href= "https://www.instagram.com/deckbarsg/" className="bg-[#EFD9D9] w-[50px] h-[50px]  flex items-center justify-center rounded-md" target="#"><BsInstagram  size= "25px" color="#E33030"/> </a>
             </motion.li>
             <motion.li whileHover={{scale:1.2}} className=" mx-2">
-              <a href="https://wa.me/6598773377" className="bg-[#25d366] w-[50px] h-[50px]  flex items-center justify-center rounded-md" target="#"><BsWhatsapp  size= "25px" color="white"/></a> 
+              <a href="https://wa.me/6598873377" className="bg-[#25d366] w-[50px] h-[50px]  flex items-center justify-center rounded-md" target="#"><BsWhatsapp  size= "25px" color="white"/></a> 
             </motion.li>
           </ul>
         </div>
