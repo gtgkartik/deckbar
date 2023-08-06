@@ -75,23 +75,21 @@ const reviews = [
 ];
 
 const CustomerReview = () => {
-
-    fetch("'https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJS6au6ssZ2jERyc-n--OV4j4&key=AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs'",{
-      method: "GET",
-      headers: {
-        "access-control-allow-origin" : "*",
-        // 'Content-Type' :
-      }})
-    .then(res => {
-      if (res.ok){
-        console.log("Success"); 
-      }  else {
-        console.log("fail")
-      }
+const [reviews, setReviews] = useState([]);
+useEffect(() => {
+  // Fetch reviews data from the backend API
+  axios
+    .get('http://localhost:5000/api/reviews')
+    .then((response) => {
+      setReviews(response.data);
     })
-    .then(data => console.log(data))
-    .catch(err => console.log("error"))
+    .catch((error) => {
+      console.error('Error fetching reviews:', error);
+    });
+}, []);
 
+console.log(reviews)
+    
   return (
     <>
       <section className="mt-[90px] py-[30px]  bg-[#eeeeee] dark:text-gray-100">
@@ -140,8 +138,6 @@ const CustomerReview = () => {
                     <p className="text-sm uppercase"></p>
                   </div>
                 </div>
-
-                
               </>
             );
           })}
