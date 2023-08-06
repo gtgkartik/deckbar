@@ -7,7 +7,7 @@ const yaml = require('js-yaml');
 const express = require('express');
 const app = express();
 const cors = require('cors');
-app.use(cors());
+app.use(cors())
 
 const GOOGLE_MAPS_API_KEY = 'AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs';
 // API endpoint to get the Google Maps API key
