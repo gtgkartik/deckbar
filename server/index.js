@@ -10,7 +10,7 @@ function getGoogleReviews() {
   console.log('=> Fetching reviews data..')
   return new Promise((resolve, reject) => {
     let reviews;
-    const url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=[PLACE_ID]&key=[API_KEY]';
+    const url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJS6au6ssZ2jERyc-n--OV4j4&key=AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs';
     axios.get(url)
     .then(res => {
       console.log('=> Reviews data fetched!')
