@@ -7,7 +7,7 @@ const [reviews, setReviews] = useState([]);
 useEffect(() => {
   // Fetch reviews data from the backend API
   axios
-    .get('http://deckbar.sg/api/reviews')
+    .get('https://master.d20py1fbr335jq.amplifyapp.com/api/reviews')
     .then((response) => {
       setReviews(response.data);
     })
