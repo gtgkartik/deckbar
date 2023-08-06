@@ -1,15 +1,32 @@
 import { useMemo } from "react";
+import React, { useEffect, useState } from 'react';
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import "./Map.css";
+import axios from 'axios';
 
-
+const backendUrl = 'http://localhost:5000'
 export default function Map() {
+  const [googleMapsApiKey, setGoogleMapsApiKey] = useState(null);
+
+  useEffect(() => {
+    // Fetch the Google Maps API key from the backend
+    axios.get("http://localhost:5000/api/reviews")
+      .then((response) => {
+        setGoogleMapsApiKey(response.data.apiKey);
+      })
+      .catch((error) => {
+        console.error('Error fetching Google Maps API key:', error);
+      });
+  }, []);
+
+
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS,
+    googleMapsApiKey: googleMapsApiKey,
   });
 
   if (!isLoaded) return <div>Loading...</div>;
   return <IsMap />;
+
 }
 
 function IsMap() {

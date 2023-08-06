@@ -9,21 +9,29 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 
+const GOOGLE_MAPS_API_KEY = 'AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs';
+// API endpoint to get the Google Maps API key
+app.get('/api/google-maps-api-key', (req, res) => {
+  res.json({ apiKey: GOOGLE_MAPS_API_KEY });
+  console.log(res)
+});
+
+
 function getGoogleReviews() {
-  console.log('=> Fetching reviews data..');
+  // console.log('=> Fetching reviews data..');
   return new Promise((resolve, reject) => {
     let reviews;
     const url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJS6au6ssZ2jERyc-n--OV4j4&key=AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs';
     axios.get(url)
     .then(res => {
-      console.log("res.data");
-      console.log(res.data);
+      // console.log("res.data");
+      // console.log(res.data);
 
       if (res.data.status == 'OK') {
         console.log('=> Saving new reviews to markdown..');
         let today = new Date('now');
         reviews = res.data.result.reviews;
-        console.log(reviews);
+        // console.log(reviews);
         // Converting reviews to netlify format
         reviews.forEach(item => {
           let content = {

@@ -16,7 +16,7 @@ useEffect(() => {
     });
 }, []);
 
-console.log(reviews)
+// console.log(reviews)
     
   return (
     <>
