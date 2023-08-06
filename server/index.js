@@ -1,6 +1,6 @@
 const fs = require('fs');
-const klaw = require('klaw');
-const path = require('path');
+// const klaw = require('klaw');
+// const path = require('path');
 const matter = require('gray-matter');
 const axios = require('axios');
 const yaml = require('js-yaml');
@@ -13,9 +13,8 @@ const GOOGLE_MAPS_API_KEY = 'AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs';
 // API endpoint to get the Google Maps API key
 app.get('/api/google-maps-api-key', (req, res) => {
   res.json({ apiKey: GOOGLE_MAPS_API_KEY });
-  console.log(res)
-});
 
+});
 
 function getGoogleReviews() {
   // console.log('=> Fetching reviews data..');
@@ -28,7 +27,7 @@ function getGoogleReviews() {
       // console.log(res.data);
 
       if (res.data.status == 'OK') {
-        console.log('=> Saving new reviews to markdown..');
+        // console.log('=> Saving new reviews to markdown..');
         let today = new Date('now');
         reviews = res.data.result.reviews;
         // console.log(reviews);
