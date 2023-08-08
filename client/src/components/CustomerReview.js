@@ -4,10 +4,15 @@ import axios from 'axios';
 
 const CustomerReview = () => {
 const [reviews, setReviews] = useState([]);
+
 useEffect(() => {
   // Fetch reviews data from the backend API
   axios
-    .get('http://localhost:5000/api/reviews')
+    .get('https://j46mcje9w1.execute-api.ap-south-1.amazonaws.com/dev/api/reviews', {
+      headers: {
+        'x-api-key': 'AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs' // Replace with your actual API key
+      }
+    })
     .then((response) => {
       setReviews(response.data);
     })
@@ -15,7 +20,6 @@ useEffect(() => {
       console.error('Error fetching reviews:', error);
     });
 }, []);
-
 // console.log(reviews)
     
   return (

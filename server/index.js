@@ -1,6 +1,4 @@
 const fs = require('fs');
-// const klaw = require('klaw');
-// const path = require('path');
 const matter = require('gray-matter');
 const axios = require('axios');
 const yaml = require('js-yaml');
