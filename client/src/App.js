@@ -7,6 +7,7 @@ import Order from './pages/Order';
 import Menu from './pages/Menu';
 import ContactUs from './pages/ContactUs';
 import Activities from './pages/Activities';
+import Amplify from 'amp'
 function App() {
   return (
     <>

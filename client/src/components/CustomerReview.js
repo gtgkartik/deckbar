@@ -1,31 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Amplify from ''
 
 const CustomerReview = () => {
 const [reviews, setReviews] = useState([]);
 
-useEffect(() => {
-  // Fetch reviews data from the backend API
-  axios
-    .get('https://j46mcje9w1.execute-api.ap-south-1.amazonaws.com/dev/api/reviews', {
-      headers: {
-        'x-api-key': 'AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs' // Replace with your actual API key
-      }
-    })
-    .then((response) => {
-      setReviews(response.data);
-    })
-    .catch((error) => {
-      console.error('Error fetching reviews:', error);
-    });
-}, []);
+// useEffect(() => {
+//   // Fetch reviews data from the backend API
+//   axios
+//     .get('https://j46mcje9w1.execute-api.ap-south-1.amazonaws.com/dev/api/reviews', {
+//       headers: {
+//         'x-api-key': 'AIzaSyAaiF8LlG6Bb9nIr3hL1wMHR9_PY87WNVs' // Replace with your actual API key
+//       }
+//     })
+//     .then((response) => {
+//       setReviews(response.data);
+//     })
+//     .catch((error) => {
+//       console.error('Error fetching reviews:', error);
+//     });
+// }, []);
 // console.log(reviews)
+
 useEffect(() => {
   // Fetch Google reviews from your Lambda function
   const fetchReviews = async () => {
     try {
-      const response = await fetch('/reviews'); // Use the correct API endpoint
+      const response = await fetch('https://nc2obm14ec.execute-api.ap-south-1.amazonaws.com/staging/reviews'); // Use the correct API endpoint
       const data = await response.json();
       setReviews(data);
     } catch (error) {
