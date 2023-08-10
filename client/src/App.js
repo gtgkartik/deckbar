@@ -10,7 +10,6 @@ import Activities from './pages/Activities';
 function App() {
   return (
     <>
-    
     <BrowserRouter>
     <Routes>
       <Route path = "/" element ={<Home/>}/>
