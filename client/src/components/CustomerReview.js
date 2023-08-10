@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Amplify from ''
 
 const CustomerReview = () => {
 const [reviews, setReviews] = useState([]);
