@@ -78,10 +78,6 @@ const CustomerReview = () => {
 
 export default CustomerReview;
 
-
-
-
-
 const reviews = [
   {
     author_name: "cai me",
@@ -154,3 +150,7 @@ const reviews = [
     translated: false,
   },
 ];
+
+
+
+
