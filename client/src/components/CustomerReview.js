@@ -17,7 +17,7 @@ const CustomerReview = () => {
       }
     })
     .then(data => console.log(data))
-    .catch(err => console.log("error"))
+    .catch(err => console.log(""))
 
   return (
     <>
