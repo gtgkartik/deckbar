@@ -21,7 +21,20 @@ useEffect(() => {
     });
 }, []);
 // console.log(reviews)
-    
+useEffect(() => {
+  // Fetch Google reviews from your Lambda function
+  const fetchReviews = async () => {
+    try {
+      const response = await fetch('/reviews'); // Use the correct API endpoint
+      const data = await response.json();
+      setReviews(data);
+    } catch (error) {
+      console.error('Error fetching reviews:', error);
+    }
+  };
+
+  fetchReviews();
+}, []);
   return (
     <>
       <section className="mt-[90px] py-[30px]  bg-[#eeeeee] dark:text-gray-100">
