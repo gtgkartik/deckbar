@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.82f7fe5b.css",
-    "main.js": "/static/js/main.74087e3f.js",
+    "main.js": "/static/js/main.c3feb551.js",
     "static/js/787.ef3f2bf5.chunk.js": "/static/js/787.ef3f2bf5.chunk.js",
     "static/media/housewinespdf.jpg": "/static/media/housewinespdf.bd5c2fb4c4d7ac2cfc3f.jpg",
     "static/media/39.jpg": "/static/media/39.0fccfe21f43016a39b29.jpg",
@@ -94,11 +94,11 @@
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
     "main.82f7fe5b.css.map": "/static/css/main.82f7fe5b.css.map",
-    "main.74087e3f.js.map": "/static/js/main.74087e3f.js.map",
+    "main.c3feb551.js.map": "/static/js/main.c3feb551.js.map",
     "787.ef3f2bf5.chunk.js.map": "/static/js/787.ef3f2bf5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82f7fe5b.css",
-    "static/js/main.74087e3f.js"
+    "static/js/main.c3feb551.js"
   ]
 }
