@@ -38,13 +38,13 @@ const Header = (props) => {
             </a>
             <a
               className={`hover:text-yellow ${props.aboutus} duration-150 flex-shrink-0 truncate`}
-              href="about-us"
+              href="/about-us"
             >
               About Us
             </a>
             <a
               className={`hover:text-yellow ${props.promotion} duration-150 flex-shrink-0 truncate`}
-              href="promotion"
+              href="/promotion"
             >
               Promotion
             </a>
@@ -63,7 +63,7 @@ const Header = (props) => {
             </a>
             <a
               className={`hover:text-yellow ${props.contactus} duration-150 flex-shrink-0 truncate`}
-              href="contactus"
+              href="/contactus"
             >
               Contact Us
             </a>
@@ -110,7 +110,7 @@ const Header = (props) => {
             <li className="my-5">
               <a
                 className={`hover:text-yellow ${props.aboutus} duration-150 flex-shrink-0 truncate`}
-                href="about-us"
+                href="/about-us"
               >
                 About Us
               </a>
@@ -118,7 +118,7 @@ const Header = (props) => {
             <li className="my-5">
               <a
                 className={`hover:text-yellow ${props.promotion} duration-150 flex-shrink-0 truncate`}
-                href="promotion"
+                href="/promotion"
               >
                 Promotion
               </a>
